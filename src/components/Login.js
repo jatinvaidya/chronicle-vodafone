@@ -6,7 +6,8 @@ const Login = () => {
 	let searchParams = new URLSearchParams(search);
 	const organization = searchParams.get("organization");
 	const invitation = searchParams.get("invitation");
-	loginWithRedirect({ organization, invitation });
+	if (!!organization && !!invitation)
+		loginWithRedirect({ organization, invitation });
 };
 
 export default Login;
