@@ -17,6 +17,8 @@ const onRedirectCallback = (appState) => {
 // for a full list of the available properties on the provider
 const config = getConfig();
 
+console.log(`config=${config}`);
+
 const providerConfig = {
 	domain: config.domain,
 	clientId: config.clientId,
